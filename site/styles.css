@@ -252,6 +252,45 @@ blockquote p { margin: 4px 0; }
 .cases dd { margin: 4px 0 0; }
 .cases dd a { font-size: 14px; }
 
+/* Political spending */
+.table-wrap { overflow-x: auto; margin: 0 0 32px; }
+.spend {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.spend th, .spend td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.spend thead th {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid var(--ink);
+}
+.spend tbody th { font-weight: 700; width: 9em; }
+.spend td a { font-size: 14px; }
+.spend .amt {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  width: 9em;
+}
+
+@media (max-width: 640px) {
+  .spend thead { display: none; }
+  .spend, .spend tbody, .spend tr, .spend th, .spend td { display: block; width: auto; }
+  .spend tr { border-bottom: 1px solid var(--rule); padding: 10px 0; }
+  .spend th, .spend td { border: 0; padding: 4px 0; }
+}
+
 /* The open question */
 .question .ask {
   margin: 28px 0 32px;
